@@ -4,12 +4,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const userController_1 = require("../controllers/userController");
+const product_1 = require("../controllers/product");
 const router = express_1.default.Router();
-// Routes
-router.get("/", userController_1.getUsers);
-router.get("/:id", userController_1.getUserById);
-router.post("/", userController_1.createUser);
-router.put("/:id", userController_1.updateUser);
-router.delete("/:id", userController_1.deleteUser);
+router.post('/upload', product_1.uploadProductImage);
+router.get('/all', product_1.getproduct);
+router.get('/all/:id', product_1.getproductbyid);
+router.get('/', (req, res) => {
+    res.send("Hey Manish Kumar");
+});
 exports.default = router;
