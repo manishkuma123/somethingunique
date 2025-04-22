@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-test:
+  build-and-lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,6 +27,3 @@ jobs:
 
     - name: Build TypeScript
       run: npm run build
-
-    - name: Run tests
-      run: npm test

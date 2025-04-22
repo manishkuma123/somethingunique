@@ -23,7 +23,10 @@ app.use("/api/auth", authuser);
 app.use("/api/product", productrouter);
 app.use('/api/appointment' , AppointmentRoutes)
 app.use('/api/cart',Cart)
-const PORT = process.env.PORT || 5000;
+app.get('/',(req:any,res:any)=>{
+res.send('hi manish ')
+})
+const PORT = process.env.PORT || 9000;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
